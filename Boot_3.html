@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+        }
+        .navbar-brand {
+            color: black;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            color: black; /* Set the menu item color to black */
+        }
+        .navbar-nav .nav-link:hover {
+            color: blue; /* Change the color on hover */
+        }
+        .btn-signup-nav {
+            background-color: blue;
+            color: white;
+            border: 2px solid blue;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 14px; /* Adjust the font size to match other navbar items */
+        }
+        .btn-signup-nav:hover {
+            background-color: white;
+            color: blue;
+        }
+
+        /* Updated styling for the pricing cards */
+        .pricing-card {
+            border: 2px solid whitesmoke; /* Set the border to black */
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 -4px 8px 0 rgba(0,0,0,0.2); /* Add a shadow effect to top and bottom */
+            transition: border-color 0.3s, box-shadow 0.3s; /* Add transitions for a smoother effect */
+            position: relative; /* Add relative positioning */
+        }
+        .pricing-card:hover {
+            border-color: rgb(66, 159, 225); /* Change the border color on hover */
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 -8px 16px 0 rgba(0,0,0,0.2); /* Increase the shadow effect on hover */
+        }
+        .h3style {
+            background-color: whitesmoke; /* Add background color */
+            padding: 10px 0; /* Adjust padding for the heading */
+            position: absolute; /* Position it absolutely within the card */
+            top: 0; /* Stick to the top */
+            left: 0; /* Stick to the left */
+            right: 0; /* Stick to the right */
+            border-bottom: 2px solid rgba(0, 0, 0, 0.2); /* Add shadow line to the bottom */
+        }
+        .h3style h3 {
+            color: black;
+        }
+        .pricing-card .price {
+            font-size: 36px; /* Increased font size for price */
+            font-weight: bold; /* Make it bold */
+            margin-top: 60px;
+            margin-bottom: 25px; /* Adjusted margin to make it more visible */
+            color: #333;
+        }
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .pricing-card ul li {
+            margin-bottom: 10px;
+        }
+        .btn-signup {
+            background-color: blue;
+            color: white;
+            border: 2px solid blue;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-signup:hover {
+            background-color: white;
+            color: blue;
+        }
+        .footer {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 10%;
+            box-shadow: 0 -3px 9px 0 rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Giri LTD & Co.</a>
+           <!-- Sign Up button in the navbar -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Enterprise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <div class="nav-item">
+                        <div class="nav-link"> <button class="btn btn-signup-nav btn-sm">Sign Up</button> </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pricing Cards -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="content" style="text-align: center;">
+                <h2>Pricing</h2>
+                <div class="content" style="margin-left: 20%; margin-right: 20%;"><p>Quickly build and effective pricing table for your potential curstormers with this bootsrap example. It's built with default Bootstrap components and utilites with little customization.</p></div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <div class="h3style">
+                        <h3 style="background-color: whitesmoke; ">Free</h3>
+                    </div>
+                    <p class="price">$0/mo</p> <!-- Moved the price below the heading -->
+                    <ul>
+                        <li>10 users included</li>
+                        <li>2 GB of storage</li>
+                        <li>Email Support</li>
+                        <li>Help Centre</li>
+                    </ul>
+                    <button class="btn btn-signup">Sign Up for free</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <div class="h3style">
+                        <h3 style="background-color: whitesmoke;">PRO</h3>
+                    </div>
+                    <p class="price">$5/mo</p> <!-- Moved the price below the heading -->
+                    <ul>
+                        <li>20 users included</li>
+                        <li>15 GB of storage</li>
+                        <li>Email Support</li>
+                        <li>Help Centre</li>
+                    </ul>
+                    <button class="btn btn-signup">Get started</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <div class="h3style">
+                        <h3 style="background-color: whitesmoke;">Enterprise</h3>
+                    </div>
+                    <p class="price">$25/mo</p> <!-- Moved the price below the heading -->
+                    <ul>
+                        <li>45 users included</li>
+                        <li>200 GB of storage</li>
+                        <li>Email Support</li>
+                        <li>Help Centre</li>
+                    </ul>
+                    <button class="btn btn-signup">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Features</h5>
+                    <p>good product<br>Does not break easily<br> Nice to have</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Resources</h5>
+                    <p>good product<br>Does not break easily<br> Nice to have</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>About</h5>
+                    <p>good product<br>Does not break easily<br> Nice to have</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-right" style="margin-right: 5%">
+            <p><img src="images/bootstraplogo.png" alt="Bootstrap Logo" height="20px" width="20px";>&copy; 2017</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

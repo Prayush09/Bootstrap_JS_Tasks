@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+  <style>
+    /* Custom CSS for field names in red when empty */
+    .field-label-invalid {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="card bg-light">
+      <article class="card-body mx-auto" style="max-width: 400px;">
+        <form id="myForm">
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Full Name:</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fas fa-user"></i> </span>
+                </div>
+                <input name="fullname" class="form-control" placeholder="Full name" type="text">
+              </div>
+              <div class="invalid-feedback">Please enter your full name.</div>
+            </div>
+          </div> <!-- form-group// -->
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Email:</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fas fa-envelope"></i> </span>
+                </div>
+                <input name="email" class="form-control" placeholder="Email address" type="email">
+              </div>
+              <div class="invalid-feedback">Please enter your email address.</div>
+            </div>
+          </div> <!-- form-group// -->
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Phone:</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fas fa-phone"></i> </span>
+                </div>
+                <input name="phonenumber" class="form-control" placeholder="Phone number" type="tel" pattern="[0-9]*">
+              </div>
+              <div class="invalid-feedback">Please enter a valid phone number with only digits.</div>
+            </div>
+          </div> <!-- form-group// -->
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Address:</label>
+            <div class="col-sm-9">
+              <input name="address" class="form-control" placeholder="Address" type="text">
+            </div>
+          </div> <!-- form-group// -->
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">City:</label>
+            <div class="col-sm-9">
+              <input name="city" class="form-control" placeholder="City" type="text">
+            </div>
+          </div> <!-- form-group// -->
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">State:</label>
+            <div class="col-sm-9">
+              <select name="state" class="form-control">
+                <option selected="">Select state</option>
+                <!-- Add Indian states here -->
+                
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option> 
+              </select>
+              <div class="invalid-feedback">Please select your state.</div>
+            </div>
+          </div> <!-- form-group// -->
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Do you have hosting?</label>
+            <div class="col-sm-9">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="haveHosting" id="haveHostingYes" value="yes">
+                <label class="form-check-label" for="haveHostingYes">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="haveHosting" id="haveHostingNo" value="no">
+                <label class="form-check-label" for="haveHostingNo">No</label>
+              </div>
+            </div>
+          </div> <!-- form-group// -->
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Password:</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fas fa-lock"></i> </span>
+                </div>
+                <input name="password" class="form-control" placeholder="Create password" type="password">
+              </div>
+              <div class="invalid-feedback">Please enter a password.</div>
+            </div>
+          </div> <!-- form-group// -->
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Repeat Password:</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fas fa-lock"></i> </span>
+                </div>
+                <input name="repeatpassword" class="form-control" placeholder="Repeat password" type="password">
+              </div>
+              <div class="invalid-feedback">Passwords do not match. Please enter the same password.</div>
+            </div>
+          </div> <!-- form-group// -->
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary btn-block"> Send</button>
+          </div> <!-- form-group// -->
+          <p class="text-center">Have an account? <a href="#">Log In</a> </p>
+        </form>
+      </article>
+    </div> <!-- card.// -->
+  </div>
+  <!--container end.-->
+  
+  <!-- Add jQuery and Bootstrap JavaScript links -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJC..."></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#myForm').submit(function (event) {
+        event.preventDefault();
+        
+        // Reset the form's styling
+        $('input, select').removeClass('is-invalid');
+        $('.field-label-invalid').removeClass('field-label-invalid');
+
+        // Check for empty fields and password match
+        let isValid = true;
+        let password = $('input[name="password"]').val();
+        let repeatPassword = $('input[name="repeatpassword"]').val();
+
+        if (password !== repeatPassword) {
+          $('input[name="password"]').addClass('is-invalid');
+          $('input[name="repeatpassword"]').addClass('is-invalid');
+          $('input[name="repeatpassword"]').siblings('.invalid-feedback').show();
+          isValid = false;
+        }
+
+        $('input, select').each(function () {
+          if ($(this).val().trim() === '') {
+            $(this).addClass('is-invalid');
+            $(this).siblings('.invalid-feedback').show();
+            $(this).closest('.mb-3').find('.col-form-label').addClass('field-label-invalid');
+            isValid = false;
+          }
+        });
+
+        if (isValid) {
+          // Submit the form or perform any other action here
+          alert('Form submitted successfully!');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

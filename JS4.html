@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time and Date Display</title>
+  <style>
+    /* Style for the buttons and output */
+    button {
+      display: block;
+      margin-bottom: 10px; /* Adds a gap between the buttons */
+    }
+
+    p {
+      margin-top: 10px; /* Adds a gap between the buttons and the output */
+    }
+  </style>
+</head>
+<body>
+  <button id="timeButton">Show Time</button>
+  <p id="output1"></p>
+  <button id="dateButton">Show Date</button>
+  <p id="output2"></p>
+
+  <script>
+    // Function to display the GMT and standard time zone
+    function showTime() {
+      const currentTime = new Date();
+      
+      // Get the GMT time
+      const gmtString = currentTime.toGMTString();
+
+      // Get the current time zone offset in minutes
+      const timeZoneOffsetMinutes = Math.abs(currentTime.getTimezoneOffset());
+
+      // Calculate the time zone offset in hours and minutes
+      const timeZoneOffsetHours = Math.floor(Math.abs(timeZoneOffsetMinutes) / 60);
+      const timeZoneOffsetMinutesRemainder = Math.abs(timeZoneOffsetMinutes) % 60;
+
+      // Determine the time zone abbreviation based on the offset
+      const timeZoneAbbreviation = timeZoneOffsetMinutes >= 0
+        ? `+${timeZoneOffsetHours.toString().padStart(2, '0')}${timeZoneOffsetMinutesRemainder.toString().padStart(2, '0')}`
+        : `-${timeZoneOffsetHours.toString().padStart(2, '0')}${timeZoneOffsetMinutesRemainder.toString().padStart(2, '0')}`;
+
+      // Display GMT and the time zone
+      document.getElementById('output1').textContent = `GMT: ${gmtString} (${timeZoneAbbreviation})`;
+    }
+
+    // Function to display the current date
+    function showDate() {
+      const currentDate = new Date();
+      const dateString = currentDate.toLocaleDateString();
+      document.getElementById('output2').textContent = `Current Date: ${dateString}`;
+    }
+
+    // Add event listeners to the buttons
+    document.getElementById('timeButton').addEventListener('click', showTime);
+    document.getElementById('dateButton').addEventListener('click', showDate);
+  </script>
+</body>
+</html>
